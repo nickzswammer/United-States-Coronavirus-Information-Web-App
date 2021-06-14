@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='../static/styles.css'>
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon-16x16.png">
+    <link rel="manifest" href="../static/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel='stylesheet' href='../static/styles.css'>
+
+    <title>US Coronavirus Data</title>
+</head>
+
+<body>
+    <header>
+        <br>
+        <br>
+        <a href='/'><img src='../static/DC CAN_Icon2_Gray (2).png' width=75 length=75 style='float:left'></a>
+        <h1>United States Coronavirus Data</h1>
+        <a href='/contact' style='float: right; text-decoration: none;'>Contact/About</a>
+    </header>
+
+    <br>
+    <br>
+
+    <table class='table table-striped'>
+        <thead class='thead-dark'>
+            <tr>
+                <th scope="col">Location</th>
+                <th scope="col">Cases</th>
+                <th scope="col">Deaths</th>
+                <th scope="col">Last Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for state in data %}
+
+            <tr>
+                <td>Location: {{state['state']}}</td>
+                <td>Cases: {{state['case']}}</td>
+                <td>Deaths: {{state['death']}}</td>
+                <td>Last Updated: {{state['updated']}}</td>
+            </tr>
+
+            {% endfor %}
+
+        </tbody>
+    </table>
+    <br>
+    <p style='color: white; background-color: #28242c; padding-top: 20px; padding-bottom: 20px; text-align: center;'>
+        Nicholas Zhang © All Rights Reserved
+    </p>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

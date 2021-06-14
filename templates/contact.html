@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='../static/styles.css'>
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon-16x16.png">
+    <link rel="manifest" href="../static/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel='stylesheet' href='../static/styles.css'>
+
+    <title>Contact - About: US Coronavirus Data</title>
+</head>
+
+<body>
+    <header>
+        <br>
+        <br>
+        <a href='/'><img src='../static/DC CAN_Icon2_Gray (2).png' width=75 length=75 style='float:left'></a>
+        <h1>United States Coronavirus Data</h1>
+        <a href='/' style='float: right; text-decoration: none;'>Home</a>
+    </header>
+    <br>
+    <br>
+    <br>
+    <p style='margin-left: 300px; margin-right: 300px;'>This website is made to show up-to-date statistics for each
+        state and other miscellaneous places. These
+        statistics are provided by trusted APIs and sources. Each statistic is updated frequently. My Github is <a
+            href='https://github.com/nickzswammer'>here</a>. There are other projects similar to this that are awesome
+        and cool. Feel free to share this anywhere!</p>
+
+
+    <b>
+        <p style='color: #4bb543; margin-left: 300px;'>
+            {{success_message}}
+        </p>
+    </b>
+    <br>
+
+    <form action='/contact' method='POST' style='margin-left: 300px; margin-right: 300px;'>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Email address</label>
+            <input name='email' type="email" class="form-control" id="exampleFormControlInput1"
+                placeholder="name@example.com">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Full Name</label>
+            <input name='name' type="text" class="form-control" id="exampleFormControlInput1" placeholder="John Doe">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Message</label>
+            <textarea name='message' class="form-control" id="exampleFormControlTextarea1" rows="3"
+                placeholder="Message content goes here..." style='height: 300px;'></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style='width: 100px;'>Submit</button>
+    </form>
+    <br>
+    <br>
+    <br>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
