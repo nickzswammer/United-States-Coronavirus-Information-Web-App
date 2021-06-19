@@ -14,7 +14,6 @@ app = Flask(__name__)
 
 # Environment Variable API_KEY
 load_dotenv()
-PASS = os.getenv('PASSWORD')
 API_KEY = os.getenv('API_KEY')
 
 # FinnHub
