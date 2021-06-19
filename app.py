@@ -20,19 +20,9 @@ API_KEY = os.getenv('API_KEY')
 # FinnHub
 finnhub_client = finnhub.Client(api_key=API_KEY)
 
-# Connect with MySQL Database
-mysql = MySQL()
-app.config['MYSQL_DATABASE_USER'] = 'sql3415644'
-app.config['MYSQL_DATABASE_PASSWORD'] = PASS
-app.config['MYSQL_DATABASE_DB'] = 'sql3415644'
-app.config['MYSQL_DATABASE_HOST'] = 'sql3.freemysqlhosting.net'
-mysql.init_app(app)
-
-connection = mysql.connect()
-cursor = connection.cursor()
-
-
 # Routes
+
+
 @app.route('/')
 def home():
     data = finnhub_client.covid19()
@@ -48,13 +38,7 @@ def contact():
         email = request.form['email']
         message = request.form['message']
 
-        insertdatabase = 'INSERT INTO users (name, email, message) VALUES (%s, %s, %s)'
-        inputs = (name, email, message)
-
-        cursor.execute(insertdatabase, inputs)
-        connection.commit()
-
-        return render_template('contact.html', success_message="Message sent successfully. I will reach out to you shortly.")
+        return render_template('contact.html', success_message=f"Unfortunately, the database hosting this information has expired. Please contact me at zhang.nicholas136@gmail.com")
 
     return render_template('contact.html')
 
